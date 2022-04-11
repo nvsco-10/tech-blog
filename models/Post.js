@@ -17,15 +17,19 @@ Post.init(
     },
     content: {
       type: DataTypes.STRING,
-      allowNull: true,
+      allowNull: false,
     },
-    createdAt: {
-        type: "TIMESTAMP",
-        defaultValue: DataTypes.literal("CURRENT_TIMESTAMP"),
+    date_created: {
+        type: DataTypes.DATE,
         allowNull: false,
-      },
-    creator_id: {
-      type: DataTypes.BOOLEAN,
+        defaultValue: DataTypes.NOW,
+    },
+    user_id: {
+        type: DataTypes.INTEGER,
+        references: {
+          model: 'user',
+          key: 'id',
+        },
     },
   },
   {
