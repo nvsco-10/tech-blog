@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User, Post } = require('../models');
+const { User, Post, Comment } = require('../models');
 
 // route to get all blog posts
 router.get('/', async (req, res) => {
@@ -43,6 +43,12 @@ router.get('/post/:id', async (req, res) => {
               'username',
             ],
           },
+          // {
+          //   model: Comment,
+          //   attributes: [
+          //     'text', 'user_id', 'post_id', 'date_created'
+          //   ]
+          // }
         ],
       });
       const post = singlePost.get({ plain: true });

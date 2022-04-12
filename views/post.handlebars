@@ -1,7 +1,42 @@
 <div class="post-container">
     <img src="https://picsum.photos/600/300" alt="random placeholder image">
     <h3>{{post.title}}</h3>
-    <p>Posted by: {{user.username}}</p>
-    <p>Date posted: {{post.date_created}}</p>
+    <p>Posted by: {{post.user.username}} | {{post.date_created}}</p>
     <p>{{post.content}}</p>
 </div>
+<div class="comment-container">
+    <form action="">
+        <div class="mb-3">
+        <label for="comment" class="form-label">Add Comment</label>
+        <textarea name="comment" class="form-control" id="comment" rows="2" cols="50">
+        </textarea> 
+        <button id="addcomment" type="submit" class="btn btn-success">Add Comment</button>
+    </form>
+    <div class="display-comments">
+        {{!-- {{#each comments as |comment|}}
+        <div class="single-comment">
+            <div class="comment-header">
+                <h4>{{username}}</h4>
+                <p>{{comment.date_created}}</p>
+            </div>
+            <p>{{comment.text}}</p>
+        </div> --}}
+        {{!-- <div class="single-comment">
+            <div class="comment-header">
+                <h4>username</h4>
+                <p>01/01/2001</p>
+            </div>
+            <p>This is a great post!</p>
+        </div>
+        <div class="single-comment">
+            <div class="comment-header">
+                <h4>username</h4>
+                <p>01/01/2001</p>
+            </div>
+            <p>This is a great post!</p>
+        </div> --}}
+        {{!-- {{/each}} --}}
+    </div>
+</div>
+
+<script src="/js/new-comment.js"></script>

@@ -1,13 +1,26 @@
-<h3>My Blog Posts</h3>
+<h3 class="text-center">My Blog Posts</h3>
+<div class="text-center container-fluid">
+    <button id="new-post" class="btn btn-primary"><a href="/dashboard/newpost">Add new post</a></button>
+</div>
 
-<button id="new-post" class="btn btn-primary"><a href="/dashboard/newpost">Add new post</a></button>
+<div class="dashboard-posts">
 
-{{#each posts as |post|}}
-    <div class="post-overview">
-        <img src="https://picsum.photos/350/200" alt="random placeholder image">
-        <h3><a href="/post/{{post.id}}">{{post.title}}</a></h3>
-        <div class="post-details">
-            <p>Date posted: {{post.date_created}}</p>
+{{#if posts.length}}
+
+    {{#each posts as |post|}}
+        <div class="post-overview">
+            <img src="https://picsum.photos/350/200" alt="random placeholder image">
+            <h3><a href="/post/{{post.id}}">{{post.title}}</a></h3>
+            <div class="post-details">
+                <p>Date posted: {{post.date_created}}</p>
+            </div>
         </div>
-    </div>
-{{/each}}
+    {{/each}}
+
+    {{else}}
+
+        <p>No posts to show</p>
+
+{{/if}}
+
+</div>

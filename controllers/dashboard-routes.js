@@ -3,21 +3,15 @@ const { User, Post } = require('../models');
 
 router.get('/', async (req, res) => {
     try {
-        const blogPosts = await Post.findAll({
-          include: [
-            {
-              model: User,
-              attributes: ['username'],
-            },
-          ],
-        });
+      const userData = await User.findByPk(req.session.user_id, {
+        attributes: { exclude: ['password'] },
+        include: [{ model: Post }],
+      });
     
-        const posts = blogPosts.map((post) =>
-          post.get({ plain: true })
-        );
+      const user = userData.get({ plain: true });
     
         res.render('dashboard', {
-          posts,
+          ...user,
           loggedIn: req.session.loggedIn,
         });
       } catch (err) {

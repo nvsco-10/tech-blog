@@ -1,11 +1,19 @@
-<h2 class="latest-posts">Latest Posts</h2>
+<h2 class="latest-posts text-center">Latest Posts</h2>
 
-{{#each posts as |post|}}
-    <div class="post-overview">
-        <img src="https://picsum.photos/350/200" alt="random placeholder image">
-        <h3><a href="/post/{{post.id}}">{{post.title}}</a></h3>
-        <div class="post-details">
-            <p>Date posted: {{post.date_created}}</p>
+<div class="homepage-posts">
+
+{{#if posts.length}}
+
+    {{#each posts as |post|}}
+        <div class="post-overview">
+            <img src="https://picsum.photos/350/200" alt="random placeholder image">
+            <h3><a href="/post/{{post.id}}">{{post.title}}</a></h3>
+            <div class="post-details">
+                <p>Posted by: {{post.user.username}} | {{post.date_created}}</p>
+            </div>
         </div>
-    </div>
-{{/each}}
+    {{/each}}
+
+{{/if}}
+
+</div>
