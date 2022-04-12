@@ -12,29 +12,19 @@
         <button id="addcomment" type="submit" class="btn btn-success">Add Comment</button>
     </form>
     <div class="display-comments">
-        {{!-- {{#each comments as |comment|}}
-        <div class="single-comment">
-            <div class="comment-header">
-                <h4>{{username}}</h4>
-                <p>{{comment.date_created}}</p>
+        {{#if post.comments.length}}
+            {{#each post.comments as |comment|}}
+            <div class="single-comment">
+                <div class="comment-header">
+                    <h4>{{comment.user.username}}</h4>
+                    <p>{{comment.date_created}}</p>
+                </div>
+                <p>{{comment.comment_text}}</p>
             </div>
-            <p>{{comment.text}}</p>
-        </div> --}}
-        {{!-- <div class="single-comment">
-            <div class="comment-header">
-                <h4>username</h4>
-                <p>01/01/2001</p>
-            </div>
-            <p>This is a great post!</p>
-        </div>
-        <div class="single-comment">
-            <div class="comment-header">
-                <h4>username</h4>
-                <p>01/01/2001</p>
-            </div>
-            <p>This is a great post!</p>
-        </div> --}}
-        {{!-- {{/each}} --}}
+            {{/each}}
+            {{else}}
+            <p>No comments to show</p>
+        {{/if}}
     </div>
 </div>
 
