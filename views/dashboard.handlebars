@@ -1,1 +1,13 @@
+<h3>My Blog Posts</h3>
+
 <button id="new-post" class="btn btn-primary"><a href="/dashboard/newpost">Add new post</a></button>
+
+{{#each posts as |post|}}
+    <div class="post-overview">
+        <img src="https://picsum.photos/350/200" alt="random placeholder image">
+        <h3><a href="/post/{{post.id}}">{{post.title}}</a></h3>
+        <div class="post-details">
+            <p>Date posted: {{post.date_created}}</p>
+        </div>
+    </div>
+{{/each}}
