@@ -1,1 +1,9 @@
-<h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt velit rerum cupiditate accusantium officia maxime! Blanditiis ea praesentium harum incidunt id inventore, nostrum recusandae in. Ut exercitationem tempora consectetur quos.</h1>
+<h2 class="latest-posts">Latest Posts</h2>
+
+{{#each posts as |post|}}
+    <div class="post-overview">
+        <img src="https://picsum.photos/350/200" alt="random placeholder image">
+        <h3>{{post.title}}</h3>
+        <p>{{post.content}}</p>
+    </div>
+{{/each}}
