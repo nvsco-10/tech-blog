@@ -17,6 +17,11 @@
             <ul>
                 <li class="nav-links"><a href="http://">Home</a></li>
                 <li class="nav-links"><a href="http://">Dashboard</a></li>
+                {{#if logged_in}}
+                    <li class="nav-links"><a href="http://">Logout</a></li>
+                {{else}}
+                    <li class="nav-links"><a href="/login">Login</a></li>
+                {{/if}}
             </ul>
         </nav>
     </header>
@@ -26,6 +31,10 @@
             {{{ body }}}
         </div>
     </main>
+    
+    {{#if loggedIn}}
+        <script src="/js/logout.js"></script>
+    {{/if}}
     
 </body>
 </html>
