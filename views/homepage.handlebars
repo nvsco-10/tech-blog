@@ -4,6 +4,10 @@
     <div class="post-overview">
         <img src="https://picsum.photos/350/200" alt="random placeholder image">
         <h3>{{post.title}}</h3>
+        <div class="post-details">
+            <h4>Posted by: {{post.user_id}}</h4>
+            <h4>Date posted: {{post.date_created}}</h4>
+        </div>
         <p>{{post.content}}</p>
     </div>
 {{/each}}
