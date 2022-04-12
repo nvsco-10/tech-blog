@@ -2,13 +2,42 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: monospace;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
 header {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: whitesmoke;
+    padding: 0.5rem 0;
+}
+
+header .logo {
+    text-align: center;
+    font-family: fantasy;
+    letter-spacing: 1.2;
 }
 
 .nav-links {
     display: inline;
+    padding: 1em;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+main div {
+    width: 80%;
 }
