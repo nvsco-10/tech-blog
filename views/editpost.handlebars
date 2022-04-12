@@ -1,0 +1,13 @@
+<form class="newpost">
+    <div class="mb-3">
+        <label for="edit-title" class="form-label">Post Title</label>
+        <input type="text" class="form-control" name="edit-title" id="edit-title" value="{{post.title}}"> 
+    </div>
+    <div class="mb-3">
+        <label for="edit-content" class="form-label">Post Content</label>
+        <textarea name="edit-content" class="form-control" id="edit-content" rows="4" cols="50" value="{{post.content}}"></textarea> 
+    </div>
+    <button id="editpost" type="submit" class="btn btn-success">Edit Post</button>
+</form>
+
+<script src="/js/edit-post.js"></script>

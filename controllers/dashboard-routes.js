@@ -20,10 +20,31 @@ router.get('/', async (req, res) => {
       }
 });
 
+router.get('/post/:id', async (req, res) => {
+
+  try {
+      const postData = await Post.findByPk(req.params.id, {
+      });
+    
+      const post = postData.get({ plain: true });
+    
+        res.render('editpost', {
+          post,
+          loggedIn: req.session.loggedIn,
+        });
+      } catch (err) {
+        console.log(err);
+        res.status(500).json(err);
+      }
+  
+});
+
 router.get('/newpost', async (req, res) => {
     res.render('newpost', { loggedIn: req.session.loggedIn });
     
 });
+
+
 
 
 module.exports = router;
