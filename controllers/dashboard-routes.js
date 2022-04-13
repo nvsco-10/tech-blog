@@ -1,8 +1,13 @@
 const router = require('express').Router();
 const { User, Post } = require('../models');
-const withAuth = require('../utils/auth');
 
-router.get('/', withAuth, async (req, res) => {
+router.get('/', async (req, res) => {
+
+  if (!req.session.loggedIn) {
+    res.redirect('/login');
+
+  } else {
+
     try {
       const userData = await User.findByPk(req.session.user_id, {
         attributes: { exclude: ['password'] },
@@ -19,6 +24,8 @@ router.get('/', withAuth, async (req, res) => {
         console.log(err);
         res.status(500).json(err);
       }
+  }
+  
 });
 
 router.get('/post/:id', async (req, res) => {
