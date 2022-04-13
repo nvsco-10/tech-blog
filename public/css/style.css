@@ -137,6 +137,16 @@ main div {
 
 .login-forms {
     display: flex;
+    width: 100%;
     flex-direction: row;
     align-items: flex-start;
+}
+
+.login-input, .login-btn {
+    width: 100%;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
 }

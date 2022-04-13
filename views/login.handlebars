@@ -1,10 +1,11 @@
-<div class="login-forms row mx-auto">
-  <div class="col-lg-6">
+<div class="login-forms">
+  <div>
+    <h3>Login</h3>
     <form class="login-form">
-      <h3 class="page-title">Login</h3>
       <div class="mb-3">
         <label for="username-login" class="form-label">Username</label>
         <input type="text" class="form-control" id="username-login">
+      </div>
       <div class="mb-3">
         <label for="password-login" class="form-label">Password</label>
         <input type="password" class="form-control" id="password-login">
@@ -12,9 +13,9 @@
       <button type="submit" class="btn btn-primary">Login</button>
     </form>
   </div>
-  <div class="col-lg-6">
+  <div>
+    <h3>No account yet? Sign up!</h3>
     <form class="signup-form">
-      <h3 class="page-title">No Account Yet? Sign up!</h3>
       <div class="mb-3">
         <label for="username-signup" class="form-label">Username</label>
         <input type="text" class="form-control" id="username-signup">
@@ -27,11 +28,11 @@
       <div class="mb-3">
         <label for="password-signup" class="form-label">Password</label>
         <input type="password" class="form-control" id="password-signup">
+        <div id="passwordHelp" class="form-text">Min-length: 8 characters.</div>
       </div>
-      <button type="submit" class="btn btn-success">Sign Me Up</button>
+      <button type="submit" class="btn btn-success">Sign up</button>
     </form>
   </div>
-
 </div>
 
 <script src="./js/login.js"></script>
