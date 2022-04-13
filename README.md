@@ -19,7 +19,7 @@
 
 ## Installation
 
-* No installation required  - open the app via Heroku.
+* No installation required  - [open the app via Heroku](https://lit-temple-46555.herokuapp.com/)
 
 <br>
 
