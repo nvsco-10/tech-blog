@@ -132,3 +132,11 @@ main div {
 .comment-text {
     padding: 0.5em;
 }
+
+/* LOGIN/SIGN UP FORMS */
+
+.login-forms {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
