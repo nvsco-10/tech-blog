@@ -1,25 +1,25 @@
-<div class="post-container">
+<div class="post-container mx-auto">
     <img src="https://picsum.photos/600/300" alt="random placeholder image">
     <h3>{{post.title}}</h3>
-    <p>Posted by: {{post.user.username}} | {{post.date_created}}</p>
-    <p>{{post.content}}</p>
+    <p class="post-details">Posted by: {{post.user.username}} | {{post.date_created}}</p>
+    <p class="post-content">{{post.content}}</p>
 </div>
-<div class="comment-container">
+<div class="comment-container col-lg-8 mx-auto">
     <form action="">
-        <div class="mb-3">
-        <label for="comment" class="form-label">Add Comment</label>
+        <div class="mb-3 mx-auto">
+        <label for="comment" class="form-label">Leave A Comment!</label>
         <textarea name="comment" class="form-control" id="comment" rows="2" cols="50"></textarea> 
         <button id="addcomment" type="submit" class="btn btn-success">Add Comment</button>
     </form>
-    <div class="display-comments">
+    <div class="display-comments mx-auto">
         {{#if post.comments.length}}
             {{#each post.comments as |comment|}}
             <div class="single-comment">
                 <div class="comment-header">
-                    <h4>{{comment.user.username}}</h4>
-                    <p>{{comment.date_created}}</p>
+                    <p>from: {{comment.user.username}}</p>
+                    <p>posted on: {{comment.date_created}}</p>
                 </div>
-                <p>{{comment.comment_text}}</p>
+                <p class="comment-text">{{comment.comment_text}}</p>
             </div>
             {{/each}}
             {{else}}

@@ -10,6 +10,10 @@ a {
     color: inherit;
 }
 
+p {
+    font-size: 1.2rem;
+}
+
 header {
     display: flex;
     flex-direction: column;
@@ -29,6 +33,11 @@ header .logo {
 .nav-links {
     display: inline;
     padding: 1em;
+    font-size: 1.5rem;
+}
+
+ul button {
+    font-size: 1.5rem;
 }
 
 main {
@@ -39,6 +48,9 @@ main {
 }
 
 main div {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
     width: 80%;
 }
 
@@ -67,11 +79,56 @@ main div {
     text-align: center;
 }
 
-/* DASHBOARD */
 .homepage-posts, .dashboard-posts {
     width: 100%;
     display: flex;
+    flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
     padding: 3rem 1rem;
+}
+
+/* SINGLE POSTS */
+
+.post-container {
+    margin: 2rem 0;
+    border-bottom: solid grey 1px;
+}
+
+.post-container h3 {
+    margin: 2rem 0 0.5rem;
+    text-align: center;
+}
+
+.post-details {
+    text-align: center;
+}
+
+.post-content {
+    margin: 2rem 0;
+    text-align: justify;
+}
+
+.display-comments {
+    width: 100%;
+    margin: 1rem;
+}
+
+.single-comment {
+    background-color: rgb(247, 244, 240);
+    width: 100%;
+    margin: 1rem;
+    padding: 0.5em;
+}
+
+.comment-header {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: solid 1px gray;
+}
+
+.comment-text {
+    padding: 0.5em;
 }
