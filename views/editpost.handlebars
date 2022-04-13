@@ -1,14 +1,16 @@
-<form class="newpost">
-    <div class="mb-3">
-        <label for="edit-title" class="form-label">Post Title</label>
-        <input type="text" class="form-control" name="edit-title" id="edit-title" value="{{post.title}}"> 
-    </div>
-    <div class="mb-3">
-        <label for="edit-content" class="form-label">Post Content</label>
-        <textarea name="edit-content" class="form-control" id="edit-content" rows="4" cols="50" >{{post.content}}</textarea> 
-    </div>
-    <button id="updatepost" type="submit" class="btn btn-primary">Update Post</button>
-    <button id="deletepost" type="submit" class="btn btn-danger">Delete Post</button>
-</form>
+<div class="mx-auto">
+    <form class="newpost">
+        <div class="mb-3 col-lg-12">
+            <label for="edit-title" class="form-label">Post Title</label>
+            <input type="text" class="form-control" name="edit-title" id="edit-title" value="{{post.title}}"> 
+        </div>
+        <div class="mb-3 col-lg-12">
+            <label for="edit-content" class="form-label">Post Content</label>
+            <textarea name="edit-content" class="form-control" id="edit-content" rows="4" cols="50" >{{post.content}}</textarea> 
+        </div>
+        <button id="updatepost" type="submit" class="btn btn-primary">Update Post</button>
+        <button id="deletepost" type="submit" class="btn btn-danger">Delete Post</button>
+    </form>
+</div>
 
 <script src="/js/edit-post.js"></script>
